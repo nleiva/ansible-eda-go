@@ -3,7 +3,7 @@
 
   sources:
     - name: Run Go program executable/binary file
-      nleiva.go.cmd:
+      cmd:
         command: ./main
         send_output: true
 
