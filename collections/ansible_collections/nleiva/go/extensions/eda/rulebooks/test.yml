@@ -3,7 +3,7 @@
 
   sources:
     - name: Run Go program executable/binary file
-      ansible.eda.cmd:
+      nleiva.go.cmd:
         command: ./main
         send_output: true
 

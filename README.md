@@ -8,3 +8,4 @@ cd go && go build -o ../plugins/event_source/main main.go
 
 
 
+collections/ansible_collections
