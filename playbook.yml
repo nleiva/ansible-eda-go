@@ -1,0 +1,20 @@
+- name: Configure ACL
+  hosts: "{{ device }}"
+  gather_facts: false
+
+  tasks:
+    # - name: Parse ACL interfaces for provided configuration
+    #   cisco.ios.ios_acls:
+    #     running_config: "{{ lookup('file', config) }}"
+    #     state: parsed
+    #   ignore_errors: true
+    #   register: ios_acls
+    #   vars:
+    #     ansible_connection: ansible.netcommon.network_cli
+    #     ansible_network_os: cisco.ios.ios
+
+    # - name: Use ACL resource module [Cisco IOS XR]
+    #   cisco.iosxr.iosxr_acls:
+    #     state: replaced
+    #     config: "{{ ios_acls.content  }}"
+    #   when: ansible_network_os == 'cisco.iosxr.iosxr'
