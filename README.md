@@ -7,5 +7,4 @@ cd go && go build -o ../plugins/event_source/main main.go
 ```
 
 
-
-collections/ansible_collections
+DE: quay.io/nleiva/de-general-image
