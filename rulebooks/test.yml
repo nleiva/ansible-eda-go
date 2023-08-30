@@ -4,15 +4,16 @@
   sources:
     - name: Run Go program executable/binary file
       nleiva.eda.cmd:
-        command: ls -lah
+        command: pwd
         send_output: true
+        deserialize: false
 
   rules:
     - name: match cmd event
       condition: event.cmd.failed == true and event.cmd.device == "sandbox-iosxe-latest-1.cisco.com"
       action:
         debug:
-          msg: "sandbox-iosxe-latest-1.cisco.com FAILED"
+          # msg: "sandbox-iosxe-latest-1.cisco.com FAILED"
 
       # throttle:
       #   once_within: 5 minutes
