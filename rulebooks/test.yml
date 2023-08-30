@@ -13,7 +13,7 @@
       condition: event.cmd is defined
       action:
         debug:
-          msg:"{{ event.cmd }}"
+          msg: "{{ event.cmd }}"
 
       # throttle:
       #   once_within: 5 minutes
