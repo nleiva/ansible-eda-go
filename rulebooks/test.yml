@@ -4,7 +4,7 @@
   sources:
     - name: Run Go program executable/binary file
       nleiva.eda.cmd:
-        command: pwd
+        command: ls
         send_output: true
         deserialize: false
 
