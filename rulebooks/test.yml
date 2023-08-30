@@ -10,10 +10,10 @@
 
   rules:
     - name: match cmd event
-      condition: event.cmd.failed == true and event.cmd.device == "sandbox-iosxe-latest-1.cisco.com"
+      condition: event.cmd is defined
       action:
         debug:
-          # msg: "sandbox-iosxe-latest-1.cisco.com FAILED"
+          msg:"{{ event.cmd }}"
 
       # throttle:
       #   once_within: 5 minutes
