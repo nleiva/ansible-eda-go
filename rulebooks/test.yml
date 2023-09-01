@@ -4,7 +4,8 @@
   sources:
     - name: Run Go program executable/binary file
       nleiva.eda.cmd:
-        command: "git clone --quiet https://github.com/nleiva/ansible-eda-go; cd ansible-eda-go; go run main.go"
+        command: "cd ansible-eda-go && ./closed-loop"
+        repository: "https://github.com/nleiva/ansible-eda-go"
         send_output: true
         deserialize: false
 
@@ -14,16 +15,3 @@
       action:
         debug:
           msg: "{{ event.cmd }}"
-
-      # throttle:
-      #   once_within: 5 minutes
-      #   group_by_attributes:
-      #     - event.cmd.failed
-      # action:
-      #   run_job_template:
-      #     name: "Demo Job Template"
-      #     organization: "Default"
-      #     # Need JT prompt-on-launch for the below to work!
-      #     job_args:
-      #       extra_vars:
-      #         device: '{{ event.cmd.device}}'

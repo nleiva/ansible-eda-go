@@ -11,3 +11,11 @@ $ ./main
 ./main: /lib64/libc.so.6: version `GLIBC_2.32' not found (required by ./main)
 ./main: /lib64/libc.so.6: version `GLIBC_2.34' not found (required by ./main)
 ```
+
+==>
+
+Fix?
+
+```bash
+CGO_ENABLED=0 go build
+```
