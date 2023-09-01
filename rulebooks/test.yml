@@ -4,7 +4,7 @@
   sources:
     - name: Run Go program executable/binary file
       nleiva.eda.cmd:
-        command: git clone --quiet https://github.com/nleiva/ansible-eda-go; cd ansible-eda-go; ./main
+        command: "git clone --quiet https://github.com/nleiva/ansible-eda-go; cd ansible-eda-go; go run main.go"
         send_output: true
         deserialize: false
 
